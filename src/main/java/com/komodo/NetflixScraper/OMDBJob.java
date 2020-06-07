@@ -42,7 +42,7 @@ public class OMDBJob {
 				genreModel = GenreDAO.save(genreName);
 			}
 			// saves ProductGenre
-			ProductGenreDAO.save(product.getId(), genreModel.getId());
+			ProductGenreDAO.save(product.getId(), genreModel.getIdGenre());
 		}
 	}
 }

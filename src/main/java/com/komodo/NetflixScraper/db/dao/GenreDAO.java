@@ -23,7 +23,7 @@ public class GenreDAO {
 	
 	private static Genre parseResult(ResultSet rs) throws SQLException{
 		Genre genreModel = new Genre();
-		genreModel.setId(rs.getInt("idGenre"));
+		genreModel.setIdGenre(rs.getInt("id_genre"));
 		genreModel.setName(rs.getString("name"));
 		return genreModel;
 	}

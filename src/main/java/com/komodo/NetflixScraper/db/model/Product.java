@@ -2,14 +2,26 @@ package com.komodo.NetflixScraper.db.model;
 
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "Product")
 public class Product {
 
+	@Column(name = "id_product")
 	private long id;
 	private String title;
 	private String year;
 	private String runtime;
 	private String director;
 	private double metascore;
+	
+	@Column(name = "imdb_rating")
 	private double imdbRating;
 	private List<String> listGenres;
 	

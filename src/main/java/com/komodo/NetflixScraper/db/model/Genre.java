@@ -1,8 +1,13 @@
 package com.komodo.NetflixScraper.db.model;
 
+import javax.persistence.Column;
+import javax.persistence.Table;
+
+@Table(name = "Genre")
 public class Genre {
 
-	private long id;
+	@Column(name = "id_genre")
+	private long idGenre;
 	private String name;
 	
 	public Genre(){		
@@ -12,12 +17,15 @@ public class Genre {
 		this.name = name;
 	}
 	
-	public long getId() {
-		return id;
+
+	public long getIdGenre() {
+		return idGenre;
 	}
-	public void setId(long id) {
-		this.id = id;
+
+	public void setIdGenre(long idGenre) {
+		this.idGenre = idGenre;
 	}
+
 	public String getName() {
 		return name;
 	}
@@ -27,7 +35,6 @@ public class Genre {
 
 	@Override
 	public String toString() {
-		return "GenreModel [id=" + id + ", name=" + name + "]";
-	}
-		
+		return "Genre [idGenre=" + idGenre + ", name=" + name + "]";
+	}	
 }

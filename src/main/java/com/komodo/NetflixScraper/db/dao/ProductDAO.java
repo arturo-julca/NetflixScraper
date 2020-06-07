@@ -14,7 +14,7 @@ public class ProductDAO {
 	
 	public static void create(Product productModel) throws SQLException {
 		
-		String insertTableSQL = "INSERT INTO Product" + "(title, year, runtime, director, imdbRating, metascore) VALUES (?,?,?,?,?,?)";
+		String insertTableSQL = "INSERT INTO Product" + "(title, year, runtime, director, imdb_rating, metascore) VALUES (?,?,?,?,?,?)";
 		
 		PreparedStatement preparedStatement = DBConecction.getConnection().prepareStatement(insertTableSQL);
 
@@ -29,14 +29,14 @@ public class ProductDAO {
 	
 	public static int getIdFromTitle(String title) throws SQLException {
 		int id = 0;
-		String insertTableSQL = "SELECT idProduct FROM Product WHERE title = ?";
+		String insertTableSQL = "SELECT id_product FROM Product WHERE title = ?";
 		PreparedStatement preparedStatement = DBConecction.getConnection().prepareStatement(insertTableSQL);
 		preparedStatement.setString(1, title);
 		preparedStatement.executeQuery();
 		
 		ResultSet rs = preparedStatement.executeQuery();
 		while (rs.next()) {
-			id = rs.getInt("idProduct");
+			id = rs.getInt("id_product");
 		}
 		
 		return id;

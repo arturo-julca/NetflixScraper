@@ -51,7 +51,7 @@ public class RequestUtil {
 		productModel.setYear(jsonRoot.get("Year").getAsString());
 		productModel.setRuntime(jsonRoot.get("Runtime").getAsString());
 		productModel.setDirector(jsonRoot.get("Director").getAsString());
-		productModel.setImdbRating(parseScore(jsonRoot, "imdbRating"));
+//		productModel.setImdbRating(parseScore(jsonRoot, "imdbRating"));
 		productModel.setMetascore(parseScore(jsonRoot, "Metascore"));
 		productModel.setListGenres(parseGenres(jsonRoot));
 		
